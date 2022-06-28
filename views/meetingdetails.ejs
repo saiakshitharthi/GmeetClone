@@ -1,0 +1,59 @@
+<%-include('header') %>
+    <div class="container ">
+        <div class="row d-flex align-items-center justify-content-center">
+        <div class="col-6 bg-danger m-4">
+        <div class="card">
+            <%if(meetingDetails){ %>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-6 border border-danger">
+
+                            <h3>Meeting Name </h3>
+                        </div>
+                        <div class="col-6 align-self-center" >
+
+                           <h3><%= meetingDetails.Name%></h3>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-6 border border-danger">
+
+                            <h3>Author: </h3>
+                            
+                        </div>
+                        <div class="col-6 align-self-center" >
+
+                            <%= meetingDetails.author%>
+                            
+                        </div>
+                    </div>
+                    <div class="row">
+
+                        <h3>StartTime: </h3>
+                        <%= meetingDetails.startTime%>
+                    </div>
+                    <div class="row">
+
+                        <h3>EndTime: </h3>
+                        <%= meetingDetails.EndTime%>
+                    </div>
+                    <div class="row">
+
+                        <h3>Meeting Link: </h3>
+                        <%= meetingDetails.RoomId%>
+                        <a href="/meeting/startmeeting/<%=meetingDetails.RoomId%>">Click me!</a>
+                    </div>
+                </div>
+
+                <% }else{ %>
+
+                    <h3> I guess the meeting got expired!</h3>
+                    <% } %>
+        </div>
+    </div>
+    </div>
+
+    </div>
+
+    <%-include('footer') %>
