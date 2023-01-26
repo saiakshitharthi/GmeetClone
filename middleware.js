@@ -1,5 +1,9 @@
 module.exports.loginRequired = function(req,res,next){
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> master
     if(req.isAuthenticated()){
         next();
     }

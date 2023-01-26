@@ -7,7 +7,11 @@ router.get('/register', (req, res) => {
 })
 router.post('/register',async function (req, res) {
 
+<<<<<<< HEAD
     const user = new User({username: req.body.username});
+=======
+    const user = new User({username: req.body.username,email: req.body.email});
+>>>>>>> master
 
     registeredUser = await User.register(user,req.body.password);
 

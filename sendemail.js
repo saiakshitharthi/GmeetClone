@@ -1,4 +1,8 @@
 var nodemailer = require('nodemailer');
+<<<<<<< HEAD
+=======
+const schedule = require('node-schedule');
+>>>>>>> master
 var transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
@@ -8,7 +12,10 @@ var transporter = nodemailer.createTransport({
 });
 var hostName = "localhost:3000";
 function giveText(username,roomId){
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
     var text = "Hello! "+ username + "\n. Here is a gentle remainder for your meet. Your meet will start in less than 15 minutes.\n"+ "Here is the meeting Link:\n" +  hostName+ "/meeting/startmeeting/" + roomId;
     return text;
 }
@@ -34,6 +41,7 @@ async function emailSender(email){
     })
     
 }
+<<<<<<< HEAD
 async function sendEmailtoUsers(userEmails){
     
     for(let i = 0;i<userEmails.length;i++){
@@ -42,3 +50,26 @@ async function sendEmailtoUsers(userEmails){
     }
 };
 module.exports = sendEmailtoUsers;
+=======
+async function sendEmail(email,date,username,roomId){
+    var options = mailOptions;
+    options.to  =email;
+    options.text = giveText(username,roomId);
+    console.log(date);
+    date.setMinutes(date.getMinutes()-15);
+    console.log(date);
+    const job = schedule.scheduleJob(date,function(y){
+        console.log('I came inside scheduleJob function');
+        transporter.sendMail(options, function(error,info){
+            if(error){
+                console.log(error);
+            }
+            else{
+                console.log('sent Email');
+                console.log(info);
+            }
+        });
+    })
+}
+module.exports = sendEmail;
+>>>>>>> master

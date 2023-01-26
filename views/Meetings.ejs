@@ -6,7 +6,11 @@
         <div class="container">
             <h3 class="text-center mb-5">All Your Scheduled Meetings:</h3>
             <% for(let i = 0;i<MeetingDetails.length;i++){ %>
+<<<<<<< HEAD
                 
+=======
+                <% if(MeetingDetails[i].meetingName){%>
+>>>>>>> master
                 <div class="row d-flex justify-content-center mt-3">
 
                     
@@ -19,12 +23,20 @@
                             </div>
                             <div class="text-center mb-3">
 
+<<<<<<< HEAD
                                 <a id="<%=MeetingDetails[i].roomId%>" href="/meeting/startmeeting/<%=MeetingDetails[i].roomId%>"><button class="btn-success rounded" >Join-Meeting</button></a>
+=======
+                                <a id="<%=MeetingDetails[i].roomId%>" href="/meeting/startmeeting/<%=MeetingDetails[i].roomId%>"><button class="btn btn-primary" >Join-Meeting</button></a>
+>>>>>>> master
                             </div>
                         </div>
                     </div>
                     
+<<<<<<< HEAD
                 
+=======
+                    <%}%>
+>>>>>>> master
                     <%}%>
                     <%}else{%>
                         
