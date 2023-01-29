@@ -9,8 +9,6 @@ var createCanvas = async () => {
     var colorPickerElem = document.createElement('input');
     colorPickerElem.setAttribute('type', 'color');
     colorPickerElem.setAttribute('id', 'color-picker');
-
-
     canvas.setAttribute('id', 'canvas');
     canvasArea.appendChild(canvas);
     canvasArea.appendChild(colorPickerElem);

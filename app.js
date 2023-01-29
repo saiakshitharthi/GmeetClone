@@ -33,7 +33,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(flash());
-
+app.use(bodyParser.json());
 //models
 var User = require('./models/user');
 var Meeting = require('./models/meetings');

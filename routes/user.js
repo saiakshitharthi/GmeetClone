@@ -6,18 +6,13 @@ router.get('/register', (req, res) => {
     res.render('register.ejs');
 })
 router.post('/register',async function (req, res) {
-
     const user = new User({username: req.body.username,email: req.body.email});
-
     registeredUser = await User.register(user,req.body.password);
-
     req.login(registeredUser,(err)=>{
-
         if(err){
             console.log(err);
         }
         res.redirect('/');
-
     })
     
 });
