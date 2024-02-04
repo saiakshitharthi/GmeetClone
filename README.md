@@ -1,7 +1,5 @@
-**Google Meet Clone README.md:**
 
-
-## Google Meet Clone (June 2022 - July 2022)
+## Google Meet Clone 
 
 This project, developed as part of the Coding Club at IITG, implements a web application similar to Google Meet, enabling users to:
 
@@ -28,3 +26,13 @@ This project, developed as part of the Coding Club at IITG, implements a web app
 ### Getting Started
 
 This project is currently private and not available for public access. However, feel free to reach out to the developers for more information or explore similar open-source projects to learn about building your own video conferencing application.
+
+To use this application:
+
+* Connect with the database by changing url in app.js.
+* Next, just run this command:
+```
+npm install
+node app.js
+```
+
